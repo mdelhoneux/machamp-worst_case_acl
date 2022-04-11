@@ -1,7 +1,8 @@
 #!/bin/bash
 
-codebase=./
+codebase=`pwd`
 loggingdir=./logs
+mkdir -p $loggingdir
 
 cd $loggingdir
 lang_config=$1
@@ -18,8 +19,6 @@ else
     param_config=$codebase/configs/params.mbert.acl.json 
 fi
 
-CUDA_VISIBLE_DEVICES=0 \
-CUDA_DEVICE=0 \
 SEED=$RANDOM \
 BATCH_SIZE=32 \
 MAX_SENTS=15000 \
