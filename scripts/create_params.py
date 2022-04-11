@@ -11,7 +11,9 @@ include = ['ar_padt', 'eu_bdt', 'zh_gsd', 'en_ewt', 'fi_tdt', 'he_htb', 'hi_hdtb
 include = ['nl_alpino', 'sv_talbanken', 'en_ewt', 'de_hdt', 'af_afribooms', 'da_ddt', 'got_proiel', 'is_icepahc', 'no_bokmaal' ]
 # slavic
 include = ['ru_syntagrus', 'cs_pdt', 'pl_lfg','sk_snk','cu_proiel', 'orv_torot','sr_set', 'uk_iu' ]
-# romance
+# romance 
+include = ['fr_gsd', 'pt_gsd', 'it_isdt', 'es_ancora', 'ro_rrt']
+# ro + eu
 include = ['fr_gsd', 'pt_gsd', 'it_isdt', 'es_ancora', 'ro_rrt', 'eu_bdt']
 isos = {}
 
@@ -57,7 +59,6 @@ for treebank_iso in isos:
                 f'        \"train_data_path\": \"{isos[treebank_iso]["trainfile"]}\", \n'
                 f'        \"validation_data_path\": \"{isos[treebank_iso]["devfile"]}\", \n'
                 f'        \"word_idx\": 1, \n'
-                f'        \"dataset_embed_idx\": -1, \n'
                 f'        \"copy_other_columns\": true, \n'
                 f'        \"tasks": {{ \n'
                 f'            \"dependency\": {{ \n'
@@ -71,7 +72,6 @@ for treebank_iso in isos:
                 f'        \"train_data_path\": \"{isos[treebank_iso]["trainfile"]}\", \n'
                 f'        \"validation_data_path\": \"{isos[treebank_iso]["devfile"]}\", \n'
                 f'        \"word_idx\": 1, \n'
-                f'        \"dataset_embed_idx\": -1, \n'
                 f'        \"copy_other_columns\": true, \n'
                 f'        \"tasks": {{ \n'
                 f'            \"upos\": {{ \n'
